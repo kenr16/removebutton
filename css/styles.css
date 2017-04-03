@@ -14,3 +14,7 @@
 /*.locationInsert:active {
   text-decoration-style: double;
 }*/
+
+li {
+  list-style-type: none;
+}

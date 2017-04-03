@@ -7,7 +7,7 @@ function Alocation(place, landmarks, time, notes) {
 }
 
 Alocation.prototype.visit = function() {
-  return this.locationName + " in " + this.locationTime;
+  return this.locationName + " " + this.locationTime;
 }
 
 
@@ -20,11 +20,15 @@ $(document).ready(function() {
     var inputPlace = $("input#place").val();
     var inputLandmark = $("input#landmark").val();
     var inputTime = $("input#time").val();
-    var inputNotes = $("input#notes").val();
+    var inputNotes = $("#notes").val();
 
     var newEntry = new Alocation(inputPlace, inputLandmark, inputTime, inputNotes);
 
-    $("ul#locations").append("<li> <span class='trip'>" + newEntry.visit() + "</span> <span class='nuke'>" + " (Remove)" + "</span></li>");
+    $("ul#locations").append(" <li> <span class='nuke'> <button class='btn btn-xs btn-danger' name='button'>Remove</button> &nbsp </span> <span class='trip'>" + newEntry.locationName + "</span></li><br>");
+
+    // $("ul#locations").append(" <li> <span class='nuke'> <button class='btn btn-xs btn-danger' name='button'>Remove</button> &nbsp </span> <span class='trip'>" + newEntry.visit() + "</span></li><br>");
+
+
 
     $("input#place").val("");
     $("input#landmark").val("");
@@ -41,7 +45,6 @@ $(document).ready(function() {
     });
 
     $(".nuke").last().click(function(){
-      alert("Nuke activated!");
       //$(this).remove();
       //$("li").remove();
       $(this).parent().remove();
