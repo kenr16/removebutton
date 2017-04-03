@@ -24,9 +24,7 @@ $(document).ready(function() {
 
     var newEntry = new Alocation(inputPlace, inputLandmark, inputTime, inputNotes);
 
-    $("ul#locations").append(" <li> <span class='nuke'> <button class='btn btn-xs btn-danger' name='button'>Remove</button> &nbsp </span> <span class='trip'>" + newEntry.locationName + "</span></li><br>");
-
-    // $("ul#locations").append(" <li> <span class='nuke'> <button class='btn btn-xs btn-danger' name='button'>Remove</button> &nbsp </span> <span class='trip'>" + newEntry.visit() + "</span></li><br>");
+    $("ul#locations").append(" <li> <span class='nuke'> <button class='btn btn-xs btn-danger' name='button'>Remove</button> &nbsp </span> <span class='trip'>" + newEntry.visit() + "</span></li><br>");
 
 
 
