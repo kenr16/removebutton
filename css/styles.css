@@ -1,0 +1,16 @@
+#show-visit {
+  display: none;
+}
+
+.trip {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.trip:hover {
+  text-decoration: underline;
+}
+
+/*.locationInsert:active {
+  text-decoration-style: double;
+}*/
